@@ -51,11 +51,11 @@ class MorseTree:
     def __add(self, letter, code):
         node = self.root
         for symbol in code:
-            if symbol == '.':
+            if symbol == MORSE_DOT:
                 if node.left is None:
                     node.left = Node()
                 node = node.left
-            elif symbol == '-':
+            elif symbol == MORSE_DASH:
                 if node.right is None:
                     node.right = Node()
                 node = node.right
